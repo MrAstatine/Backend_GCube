@@ -1,0 +1,68 @@
+import mongoose, {Schema} from "mongoose";
+
+const answerSchema= new Schema({
+    userId:{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+        required:true
+    },
+    question1:{
+        type:String,
+        required:true,
+        trim:true,
+        index:true  
+    },
+    answer1:{
+        type:String,
+        required:true,
+        trim:true,
+        index:true
+    },
+    question2:{
+        type:String,
+        trim:true,
+        index:true
+    },
+    answer2:{
+        type:String,
+        trim:true,
+        index:true
+    },
+    question3:{
+        type:String,
+        trim:true,
+        index:true
+    },
+    answer3:{
+        type:String,
+        trim:true,
+        index:true
+    },
+    question4:{
+        type:String,
+        trim:true,
+        index:true
+    },
+    answer4:{
+        type:String,
+        trim:true,
+        index:true
+    },
+    name:{
+        type:String,
+        required:true,
+        trim:true
+    },
+    userSRN:{
+        type:String,
+        required:true,
+        trim:true
+    },
+    userDomain:{
+        type:String,
+        required:true,
+        trim:true
+    }
+})
+
+export const Answer=mongoose.model('Answer',answerSchema);
